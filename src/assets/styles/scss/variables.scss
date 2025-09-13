@@ -1,0 +1,66 @@
+@use './breakpoints.scss' as *;
+
+:root {
+    --is-mobile: false;
+
+    --header-bg: #FFF700;
+    --primary: #66B5FF;
+
+    --menu-category-item-color: #000;
+
+    --card-heading-color1: #a7a7a7;
+    --card-heading-color2: #D9D9D9;
+    --card-description-bg: 0, 0, 0;
+
+    &.light-theme {}
+
+    &.dark-theme {}
+
+    @include lg {
+        --content-margin: 0px;
+
+        --container-margin: 0 auto;
+        --container-max-width: 1810px;
+        --container-width: 100%;
+        --container-padding: 10px 20px;
+
+        --font-size-h1: 72px;
+        --font-size-h2: 40px;
+        --font-size-list-item: 30px;
+        --font-size-paragraph: 16px;
+        --line-height: 1.25;
+        --is-mobile: false;
+    }
+
+    @include md {
+        --content-margin: 0px;
+
+        --container-margin: 0 auto;
+        --container-max-width: 1240px;
+        --container-width: 100%;
+        --container-padding: 26px 100px;
+
+        --font-size-h1: 55px;
+        --font-size-h2: 32px;
+        --font-size-list-item: 22px;
+        --font-size-paragraph: 16px;
+        --line-height: 1.25;
+        --is-mobile: true;
+    }
+
+    @include xs {
+        --content-margin: 0px;
+
+        --container-margin: 0 auto;
+        --container-max-width: 768px;
+        --container-width: 100%;
+        --container-padding: 52px 29px;
+
+        --font-size-h1: 30px;
+        --font-size-h2: 24px;
+        --font-size-list-item: 20px;
+        --font-size-paragraph: 16px;
+        --line-height: 1.25;
+        --is-mobile: true;
+    }
+}
