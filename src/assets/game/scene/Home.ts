@@ -55,7 +55,7 @@ export class HomeScene extends Scene {
 
   initCubemap() {
     const loader = new CubeTextureLoader()
-    loader.setPath('/skybox/')
+    loader.setPath('skybox/')
 
     const textureCube = loader.load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png'])
 
@@ -110,7 +110,7 @@ export class HomeScene extends Scene {
   }
 
   initDoor() {
-    const doorTexture = new TextureLoader().load('/texture/door-texture.jpg')
+    const doorTexture = new TextureLoader().load('texture/door-texture.jpg')
 
     const geometry = new BoxGeometry(1, 2, 0.1)
     const material = new MeshPhongMaterial({ map: doorTexture })
