@@ -123,12 +123,14 @@ export class HomeScene extends Scene {
       roughness: 0.15,
     })
 
-    const handleSphereGeometry = new SphereGeometry(0.05, 10, 10)
+    const handleSphereGeometry = new SphereGeometry(0.04, 10, 10)
     const handleCubeGeometry = new BoxGeometry(0.02, 0.02, 0.2)
 
     const handleShpere = new Mesh(handleSphereGeometry, handleMaterial)
     const handleCube = new Mesh(handleCubeGeometry, handleMaterial)
+
     handleCube.position.set(0, 0, -0.1)
+    handleShpere.position.set(0, 0, -0.03)
 
     const handleGroup = new Group()
     handleGroup.add(handleShpere)
@@ -149,7 +151,7 @@ export class HomeScene extends Scene {
   }
 
   updateDoorValues(value: number) {
-    this.doorRoot.scale.set(value, value, 1)
-    this.doorRoot.position.set(1.5, 1 * value, 0)
+    this.doorRoot.scale.set(value, value, value)
+    this.doorRoot.position.set(1.5, value, 0)
   }
 }
